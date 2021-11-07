@@ -1,10 +1,86 @@
-.App {
-  text-align: center;
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+body {
+	font-family: sans-serif;
+	font-size: 16px;
+  background-color: rgb(250, 118, 52);
+}nav{
+  width: 95%;
+  margin-top: 5px;
+  margin-left: auto;
+  margin-right: auto;
+  background-color: rgb(220, 227, 222);
+}
+.container-nav{
+  width: 100%;
+}
+#logo-title{
+  margin-left: 20px;
+}
+input {
+	font:inherit;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+form {
+	margin: auto;
+}
+form > div {
+	display: flex;
+	background:#fff;
+	padding: 9px 22px 9px 26px;
+	border-radius: 30px;
+  height:50px;
+	border:2px solid #aeb6be;
+	box-shadow:
+		rgba(0, 0, 0, 0.1) 10px 10px 10px,
+		rgba(255, 255, 255, 0.5) -8px -8px 15px inset,
+		rgba(0, 0, 0, 0.1) 10px 10px 10px inset;
+}
+form input {
+	border:none;
+	background: transparent;
+	font-weight: bold;
+	padding-left: 30px;
+	background-image: url(https://image.flaticon.com/icons/png/512/116/116836.png);
+	background-size: 24px;
+	background-repeat: no-repeat;
+	width: 0px;
+	transition: all 1s;
+}
+form input:focus {
+	outline: none;
+	width: 300px;
+}
+.btns{
+  display: flex;
+  justify-content: end;
+  justify-items: center;
+}
+#btn-users{
+  background-color: #61dafb;
+  height: 34px;
+}
+.btn-user, .btn-basket {
+  height: 36px;
+  width: 36px;
+  margin-top: 7px;
+  margin-bottom: 7px;
+  margin-right: 10px;
+  background: none;
+  border: none;
+  border-radius: 50px;
+}
+
+.btn-user:hover, .btn-basket:hover{
+  background: #aeb6be;
+}
+
+#users, #basket{
+  height: 32px;
+  width: 32px;
 }
 
 @media (prefers-reduced-motion: no-preference) {
