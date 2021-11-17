@@ -1,8 +1,9 @@
 import React, {useState} from 'react'
 
-export const ItemCount = () => {
+export const Item = ({prod}) => {
 
-    const stockMax = 10;
+
+    const stockMax = prod.stock;
     const stockMin = 0;
     const [stock, setStock] = useState(0);
 
@@ -20,10 +21,11 @@ export const ItemCount = () => {
         }
     }
     return (
-        <div class="card " >
-            <img src="..." class="card-img-top" alt="..."/>
+        <div class="card" >
+            <img src={prod.url} class="card-img-top img" alt="..."/>
             <div class="card-body">
-                <h5 class="card-title">Primer Producto</h5>
+                <h4 class="card-title">{prod.title}</h4>
+                <h5>$ {prod.price}</h5>
                 <p><a href="#" class ="subtract" onClick={subtractStock}>-</a> <span class="stock">{stock}</span> <a href="#" onClick={addStock} class="add">+</a></p>
                 <button class="btnAdd">Añadir al Carrito</button>
             </div>

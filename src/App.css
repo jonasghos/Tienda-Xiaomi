@@ -106,6 +106,12 @@ form {
   text-decoration: none;
   color: grey;
 }
+.card {
+  margin-bottom: 10px;
+}
+.card .img {
+  margin-top: 5px;
+}
 
 @media (prefers-reduced-motion: no-preference) {
   .App-logo {
