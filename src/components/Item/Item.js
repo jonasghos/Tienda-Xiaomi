@@ -1,10 +1,10 @@
 import React, {useState} from 'react'
+import { Link } from 'react-router-dom';
 
 export const Item = ({prod}) => {
 
 
     const stockMax = prod.stock;
-    const stockMin = 0;
     const [stock, setStock] = useState(0);
 
     const addStock = () =>{
@@ -21,13 +21,16 @@ export const Item = ({prod}) => {
         }
     }
     return (
-        <div class="card" >
+        <div class="card" key={prod.id} >
             <img src={prod.url} class="card-img-top img" alt="..."/>
             <div class="card-body">
                 <h4 class="card-title">{prod.title}</h4>
                 <h5>$ {prod.price}</h5>
                 <p><a href="#" class ="subtract" onClick={subtractStock}>-</a> <span class="stock">{stock}</span> <a href="#" onClick={addStock} class="add">+</a></p>
-                <button class="btnAdd">Añadir al Carrito</button>
+                <div>
+                    <button type="button" class="btnAdd btn btn-outline-dark">Añadir al Carrito</button>
+                    <Link to={`/detail/${prod.id}`}class="btnAdd btn btn-outline-dark">Mas Info</Link>
+                </div>
             </div>
         </div>
     )

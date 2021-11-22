@@ -1,21 +1,21 @@
-
 import React, { useState, useEffect } from 'react'
+import { useParams } from 'react-router'
 import {getData} from '../../functions/getData'
-import {ItemList} from '../ItemList/ItemList'
+import {ItemDetail} from '../itemDetailContainer/ItemDetail'
 
-export const ItemListContainer = () => {
+export const ItemDetailContainer = () => {
 
+    
+    const [item, setItem] = useState()
     const [loading, setLoading] = useState(false);
-    const [products, setProducts] = useState([])
+    const {itemId} = useParams() 
+    
 
     useEffect(()=>{
         setLoading(true)
         getData()
             .then((response) => {
-            setProducts(response)
-            })
-            .catch((error)=>{
-            console.log(error)
+            setItem(response.find(prod=> prod.id === Number(itemId)))
             })
             .finally(()=>{
             setLoading(false)
@@ -27,7 +27,7 @@ export const ItemListContainer = () => {
             {
                 loading 
                     ? <h2>Loading...</h2> 
-                    : <ItemList products = {products}/>
+                    : <ItemDetail {...item}/>
             }
         </>
     )
