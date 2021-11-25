@@ -112,8 +112,10 @@ form {
 .card {
   margin-bottom: 10px;
 }
-.card .img {
+.card .img-item {
   margin-top: 5px;
+  width: auto;
+  height: 280px;
 }
 
 @media (prefers-reduced-motion: no-preference) {
@@ -168,7 +170,7 @@ form {
   margin-left: auto;
   margin-right: auto;
 }
-.itemDetail img{
+.itemDetail .img-detail{
   width: 500px;
   height: 500px;
   margin-left: 25%;

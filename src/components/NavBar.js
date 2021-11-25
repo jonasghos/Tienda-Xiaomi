@@ -16,14 +16,14 @@ export const NavBar = () => {
                         </div>
                         <div class="col-sm-4 btns">
                             <div class="">
-                                <button class="btn-user" href="https://xiaomistorear.com/" target="_blanck"><img src={users} id="users"></img></button>
+                                <button class="btn-user" href="#" target="_blanck"><img src={users} id="users"></img></button>
                                 <button class="btn-basket"><CartWidget/></button>
                             </div>
                         </div>
                     </div>
                     <div class="row row-two">
                         <div class="col-sm-3">
-                            <a href="https://xiaomistorear.com/"><img src={logo_title} id="logo-title"></img></a>
+                            <Link to="/"><img src={logo_title} id="logo-title"></img></Link>
                         </div>
                         <div class="col-sm-9 ">
                             <ul class="ul-items">

@@ -22,7 +22,7 @@ export const Item = ({prod}) => {
     }
     return (
         <div class="card" key={prod.id} >
-            <img src={prod.url} class="card-img-top img" alt="..."/>
+            <img src={prod.url} class="card-img-top img-item" alt="..."/>
             <div class="card-body">
                 <h4 class="card-title">{prod.title}</h4>
                 <h5>$ {prod.price}</h5>
