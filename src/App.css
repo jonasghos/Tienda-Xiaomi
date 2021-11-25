@@ -89,9 +89,11 @@ form {
   padding-left: 20px;
   margin-top: 10px;
 }
-
-.li-item{
+.ul-li{
   list-style-type: none;
+}
+.li-item{
+
   background: rgba(255, 253, 253, 0.8);
   width: 150px;
   height: 30px;
@@ -106,6 +108,7 @@ form {
   text-decoration: none;
   color: grey;
 }
+
 .card {
   margin-bottom: 10px;
 }
@@ -166,7 +169,9 @@ form {
   margin-right: auto;
 }
 .itemDetail img{
-  margin-left: 30%;
+  width: 500px;
+  height: 500px;
+  margin-left: 25%;
   margin-right: auto;
 }
 

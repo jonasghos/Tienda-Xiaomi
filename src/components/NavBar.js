@@ -1,6 +1,7 @@
 import logo_title from '../images/logo-title-1.png'
 import users from '../images/user_acount.png'
 import { CartWidget } from './icons/CartWidget'
+import { Link } from 'react-router-dom'
 export const NavBar = () => {
 
     return (
@@ -26,10 +27,16 @@ export const NavBar = () => {
                         </div>
                         <div class="col-sm-9 ">
                             <ul class="ul-items">
-                                <a href="" class="li-item">Inicio</a>
-                                <a href="" class="li-item">Productos</a>
-                                <a href="" class="li-item">Smartphones</a>
-                                <a href="" class="li-item">Conctacto</a>
+                                <li class="ul-li"><Link to= "/" class="li-item">Inicio</Link></li>
+                                <li class="ul-li nav-item dropdown">
+                                    <a class="li-item nav-link dropdown-toggle" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">Productos</a>
+                                    <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                                        <li><Link to={"/productos/smartphones"} class="dropdown-item">Smartphones</Link></li>
+                                        <li><Link to={"/productos/smartwatch"} class="dropdown-item" >Smartwatch</Link></li>
+                                        <li><Link to={"/productos/headphones"} class="dropdown-item" >Headphones</Link></li>
+                                    </ul>
+                                </li>
+                                <li class="ul-li"><Link class="li-item" to= "/" >Conctacto</Link></li>
                             </ul>
                         </div>
                     </div>
