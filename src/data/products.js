@@ -3,7 +3,7 @@
       {
         title: "Earphones Basic 2",
         price: 5000,
-        stock : 20,
+        stock : 10,
         category : "headphones",
         url : "https://cdn2.from.ae/media/catalog/product/cache/image/9df78eab33525d08d6e5fb8d27136e95/0/1/01_175.jpg",
         description : `
@@ -146,6 +146,24 @@
         url : "https://http2.mlstatic.com/D_NQ_NP_2X_767506-MLA44753864880_012021-V.webp",
         description : "Proximamente",
         id: 9
+      },
+      {
+        title: "Basic In Ear 3,5mm",
+        price: 1750,
+        stock : 5,
+        category : "headphones",
+        url : "https://www.arrichetta.com.ar/wp-content/uploads/2021/06/s-l1600-1.jpg",
+        description : "Proximamente",
+        id: 10
+      },
+      {
+        title: "Imilab Kw66",
+        price: 12500,
+        stock : 7,
+        category : "smartwatch",
+        url : "https://www.mylshop.com.ar/wp-content/uploads/2021/06/smart-watch-imilab.jpg",
+        description : "Proximamente",
+        id: 11
       }
     ]
   
