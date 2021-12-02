@@ -184,6 +184,11 @@ form {
   height: 500px;
 }
 /*CartView Css*/
+.cart-container{
+  width: 95%;
+  margin-right: auto;
+  margin-left: auto;
+}
 
 .cart-item {
   display: flex;

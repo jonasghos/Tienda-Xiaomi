@@ -4,6 +4,7 @@ import { CartContext } from '../cartContext/CartContext'
 export const CartView = () => {
 
     const {cart, clearCart} = useContext(CartContext)
+
     return (
         <div className = "cart-conatiner">
             <h1>Productos Agregados</h1>
@@ -16,8 +17,7 @@ export const CartView = () => {
                             <p>Precio: $ {prod.price}</p>
                             <p>Cantidad: {prod.count}</p>
                         </div>
-                    )
-                        
+                    )        
                     )
                 }
             </section>   
