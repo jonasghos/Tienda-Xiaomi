@@ -6,7 +6,7 @@ export const CartView = () => {
     const {cart, clearCart} = useContext(CartContext)
 
     return (
-        <div className = "cart-conatiner">
+        <div className = "cart-container">
             <h1>Productos Agregados</h1>
             <hr/>
             <section>
