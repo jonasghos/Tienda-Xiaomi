@@ -15,10 +15,7 @@ export const NavBar = () => {
                             </form>
                         </div>
                         <div class="col-sm-4 btns">
-                            <div class="">
-                                <button class="btn-user" href="#" target="_blanck"><img src={users} id="users"></img></button>
-                                <button class="btn-basket"><CartWidget/></button>
-                            </div>
+                                <Link to= {"/cart"}><CartWidget ></CartWidget></Link>
                         </div>
                     </div>
                     <div class="row row-two">

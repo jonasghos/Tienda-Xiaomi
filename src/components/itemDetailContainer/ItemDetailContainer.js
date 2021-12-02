@@ -15,10 +15,10 @@ export const ItemDetailContainer = () => {
         setLoading(true)
         getData()
             .then((response) => {
-            setItem(response.find(prod=> prod.id === Number(itemId)))
+                setItem(response.find(prod=> prod.id === Number(itemId)))
             })
             .finally(()=>{
-            setLoading(false)
+                setLoading(false)
             })
     }, [])
 

@@ -57,9 +57,9 @@ form {
   background-color: #61dafb;
   height: 34px;
 }
-.btn-user, .btn-basket {
-  height: 36px;
-  width: 36px;
+.btn-basket {
+  height: 38px;
+  width: 54px;
   margin-top: 2px;
   background: none;
   border: none;
@@ -67,10 +67,19 @@ form {
   margin-right: 25px;
 }
 .btn-basket {
-  margin-right: 30px;
+  margin-right: 25px;
+}
+.basket{
+  width: 36px;
+  height: 36px;
+}
+.count{
+  position: relative;
+  bottom: 20%;
+  right: 4%;
 }
 
-.btn-user:hover, .btn-basket:hover{
+.btn-basket:hover{
   background: rgba(255, 255, 255, 0.5);
   transition: 1s;
   
@@ -174,7 +183,19 @@ form {
   width: 500px;
   height: 500px;
 }
+/*CartView Css*/
 
+.cart-item {
+  display: flex;
+  padding-top: 10px;
+  justify-content: space-around;
+  width: 90%;
+  background-color: rgba(255, 255, 255, 0.3);
+  border: 1px solid grey;
+  border-radius: 10px;
+  margin-left: auto;
+  margin-right: auto;
+}
 @keyframes App-logo-spin {
   from {
     transform: rotate(0deg);
