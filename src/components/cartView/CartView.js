@@ -3,7 +3,7 @@ import { CartContext } from '../cartContext/CartContext'
 
 export const CartView = () => {
 
-    const {cart} = useContext(CartContext)
+    const {cart, clearCart} = useContext(CartContext)
     return (
         <div className = "cart-conatiner">
             <h1>Productos Agregados</h1>
@@ -21,8 +21,8 @@ export const CartView = () => {
                     )
                 }
             </section>   
-            <div>
-                <button>Vaciar Carrito</button>
+            <div className="btn-remove">
+                <button type= "button" className= "btn btn-dark" onClick = {clearCart}>Vaciar Carrito</button>
             </div>
         </div>
     )
