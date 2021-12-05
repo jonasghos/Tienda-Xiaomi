@@ -1,5 +1,4 @@
 import logo_title from '../images/logo-title-1.png'
-import users from '../images/user_acount.png'
 import { CartWidget } from './icons/CartWidget'
 import { Link } from 'react-router-dom'
 export const NavBar = () => {

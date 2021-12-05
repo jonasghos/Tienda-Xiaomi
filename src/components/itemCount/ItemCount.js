@@ -23,9 +23,24 @@ export const ItemCount = ({max, setCount, count, handleAdd }) => {
     return (
         <div class= "my-3">
             <p id = "stock"> 
-                <button href="#" class ="subtract btn btn-outline-dark" onClick={subtractCount}>-</button >
+                <button href="#" 
+                    className ={
+                        count == 0 ? "subtract btn btn-outline-danger disabled" 
+                        :  "subtract btn btn-outline-dark"
+                    }
+                    onClick={subtractCount}
+                >
+                    -
+                </button >
                 <span class="stock mx-3">{count}</span> 
-                <button href="#" onClick={addCount} class="add btn btn-outline-dark">+</button>
+                <button href="#" 
+                    onClick={addCount} 
+                    class={ 
+                        count == max ? "add btn btn-outline-danger disabled"
+                        : "add btn btn-outline-dark"
+                    }
+                >   +
+                </button>
             </p>
             <button type="button" class="btnAdd btn btn-outline-dark" onClick= {handleAdd}>Añadir al Carrito</button>
         </div>
