@@ -7,10 +7,20 @@ export const CartView = () => {
 
     const {cart, clearCart} = useContext(CartContext)
 
+/*     if (cart.lenght === 0 ){
+        return (
+                <div className = "cart-container">
+                    <h2>El carrito esta vacio</h2>
+                    <hr/>
+                    <Link className= "btn btn-dark"  to= "/">Volver a Productos</Link>
+                </div>
+        )
+    }
+ */
     return (
         <div className = "cart-container">
             {
-                cart.lenght > 0 
+                cart.length > 0 
                 ? <>
                 <h2>Carrito</h2>
                 <hr/>
@@ -28,7 +38,7 @@ export const CartView = () => {
                     <div className = "cart-order">
                             <h4>Resumen</h4>
                             <div className = "order-total">
-
+                                
                             </div>
                             <button class="btn btn-outline-success btn-order"> Finalizar compra </button>
                         </div>
