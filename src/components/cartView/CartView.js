@@ -40,7 +40,7 @@ export const CartView = () => {
                             <div className = "order-total">
                                 
                             </div>
-                            <button class="btn btn-outline-success btn-order"> Finalizar compra </button>
+                            <Link to = "/checkout" class="btn btn-outline-success btn-order"> Finalizar compra </Link>
                         </div>
                     </div>
                 </>
