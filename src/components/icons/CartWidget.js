@@ -1,5 +1,5 @@
 import React, { useContext } from 'react'
-import basket from '../../images/basket_buy.png'
+import { BsCart4 } from 'react-icons/bs'
 import { CartContext } from '../cartContext/CartContext'
 
 
@@ -8,7 +8,7 @@ export const CartWidget = () => {
     const {totalCount} = useContext(CartContext)
     return (
         <button  class="btn-basket" id = "CartWidget">
-            <img src={basket} className="basket" /> 
+            <BsCart4 className='logo-cart'/>
             <span className = "count">{totalCount()}</span>
         </button>
 

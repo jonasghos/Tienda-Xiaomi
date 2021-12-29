@@ -31,14 +31,11 @@ export const Item = ({prod}) => {
             <div class="card-body">
                 <h4 class="card-title">{prod.title}</h4>
                 <h5>$ {prod.price}</h5>
-                <p id = "stock"> 
-                    <a href="#" class ="subtract" onClick={subtractCount}>-</a>
-                    <span class="stock">{stock}</span> 
-                    <a href="#" onClick={addCount} class="add">+</a>
-                </p>
+
                 <div>
-                        <button type="button" class="btnAdd btn btn-outline-dark">Añadir al Carrito</button>
-                        <Link to={`/detail/${prod.id}`}class="btnAdd btn btn-outline-dark">Mas Info</Link>
+                    <Link to={`/detail/${prod.id}`}class="btnAdd btn btn-outline-dark">Mas Info</Link>
+                    <button type="button" class="btnAdd btn btn-outline-dark">Añadir al Carrito</button>
+                        
                 </div>
             </div>
         </div>
