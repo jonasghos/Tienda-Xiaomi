@@ -1,70 +1,20 @@
-# Getting Started with Create React App
+# Proyecto de Tienda E-commerce con React
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+El proyecto simula un ecommerce de una tienda productos de la marca Xioami (Smartphones, auticulares, relojes smart)
 
-## Available Scripts
+## Navegabilidad
+La aplicación ofrece una barra de navegación disponible en cualquier vista, con links  a las distintas categorias almacenadas en la base de datos. Cada sección renderiza el componente ItemListContainer con su respectiva catID. 
 
-In the project directory, you can run:
+## ItemLitsContainer - Item 
+El componente ItemList renderiza todos los componentes Items almacenados en la base de datos segun la url llamada, ejemplo /productos (muestro el listado completo de productos).
+A su vez cada componente Item ofrece la opción de "Mas Info" para acceder al detalle de cada item, agregar la cantidad de unidades y añadirlas al Carrito tomando en cuenta el stock disponible para cada item, cuando se alcanza el limite de stock el boton de agregar unidades se desabilita para evitar ventas sin stock.
 
-### `npm start`
+##Cart
+El carrito disponible en la barra de navegación inicia con un array vacio y un contador en 0 que aumenta a medida que se vayan ingresando nuevos productos. La vista muestra cada uno de los items ingresado con sus respectivas cantidades, precio unitario y el precio total a su ambien brinda la posibilidad de eliminar parcial el total de los productos ingresados. Tambien muestra un resumen de la compra, indicando la cantidad de productos, el total de la compra y el boton para finalizar la misma. 
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+## CheckOut View
+Esta vista unicamente se habilita cuando desde la seccion Cartview se finaliza la comrpra, si se intenta ingresar manualmente automaticamente la app te redirige al inicio. Una vez finalizada la compra, renderiza el componente /CheckOut donde se validan los datos del usuario que genero la compra, mediante una clase de Bootstrap que verifica que todos los datos esten completos. Al enviar los datos, se ejecuta la función handleSubmit que en primera instancia verifica la disponibilidad de los productos para ver si hay stock de los mismos, si esta todo ok la compra es confirmada mostrando al usuario un mensaje de confirmación con el N° de orden de compra. Y en caso de que algun producto no tenga stock disponible se muestra un mensaje de advertencia donde se indica aquellos productos que no tienen stock.
+ 
+##FireBase (project-1067522100102)
+Todos los productos mostrados están cargados en Firebase dentro de la colección "Produtcs". Cada objeto tiene la siguientes propiedades: Name, category, price, url, description, stock y más el ID proporcionado por Firestore. La conexión con la DB fue configurada en el archivo configFirebase.js
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
-
-### `npm test`
-
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `npm run build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
